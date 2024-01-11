@@ -67,7 +67,7 @@ class Message:
         self.title = title
 
         self._time_spent = doc_test_results["time_spent"].split(",")[0]
-        self.n_success = doc_test_results["success"]
+        self.n_success = doc_test_results["n_success"]
         self.n_failures = doc_test_results["failures"]
         self.n_tests = self.n_success + self.n_failures
 
@@ -372,9 +372,9 @@ if __name__ == "__main__":
     artifact = retrieve_artifact(artifact_path["name"])
     if "stats" in artifact:
         failed, success, time_spent = handle_test_results(artifact["stats"])
-        doc_test_results["failures"] = failed
-        doc_test_results["success"] = success
-        doc_test_results["time_spent"] = time_spent[1:-1] + ", "
+    doc_test_results["failures"] = failed
+    doc_test_results["success"] = success
+    doc_test_results["time_spent"] = time_spent
 
         all_failures = extract_first_line_failure(artifact["failures_short"])
         for line in artifact["summary_short"].split("\n"):
@@ -398,4 +398,5 @@ if __name__ == "__main__":
 
     message = Message("🤗 Results of the doc tests.", doc_test_results)
     message.post()
+    message.post_reply()
     message.post_reply()
