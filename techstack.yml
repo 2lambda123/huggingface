@@ -2,7 +2,7 @@ repo_name: 2lambda123/huggingface
 report_id: a38041d9602fdceeb0c89441dc273b0a
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-09T07:00:27+00:00'
+timestamp: '2024-02-29T19:20:09+00:00'
 requested_by: 2lambda123
 provider: github
 branch: main
@@ -529,6 +529,14 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-12-07 15:27:49.000000000 Z
+  vulnerabilities:
+  - name: Untrusted search path under some conditions on Windows allows arbitrary
+      code execution
+    cve_id: CVE-2024-22190
+    cve_url: https://github.com/advisories/GHSA-2mqj-m65w-jghx
+    detected_date: Jan 11
+    severity: high
+    first_patched: 3.1.41
 - name: Mako
   description: A super-fast templating language that borrows the best ideas from the
     existing templating languages
@@ -697,6 +705,20 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-11-28 00:49:13.000000000 Z
+  vulnerabilities:
+  - name: aiohttp is vulnerable to directory traversal
+    cve_id: CVE-2024-23334
+    cve_url: https://github.com/advisories/GHSA-5h86-8mv2-jq9f
+    detected_date: Jan 30
+    severity: moderate
+    first_patched: 3.9.2
+  - name: aiohttp's HTTP parser (the python one, not llhttp) still overly lenient
+      about separators
+    cve_id: CVE-2024-23829
+    cve_url: https://github.com/advisories/GHSA-8qpw-xqxj-h4r2
+    detected_date: Jan 30
+    severity: moderate
+    first_patched: 3.9.2
 - name: alembic
   description: A database migration tool for SQLAlchemy
   package_url: https://pypi.org/project/alembic
@@ -1106,6 +1128,27 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-11-28 23:53:47.000000000 Z
+  vulnerabilities:
+  - name: cryptography NULL pointer dereference with pkcs12.serialize_key_and_certificates
+      when called with a non-matching certificate and private key and an hmac_hash
+      override
+    cve_id: CVE-2024-26130
+    cve_url: https://github.com/advisories/GHSA-6vqw-3v5j-54x4
+    detected_date: Feb 22
+    severity: high
+    first_patched: 42.0.4
+  - name: Python Cryptography package vulnerable to Bleichenbacher timing oracle attack
+    cve_id: CVE-2023-50782
+    cve_url: https://github.com/advisories/GHSA-3ww4-gg4f-jr7f
+    detected_date: Feb 6
+    severity: high
+    first_patched: 42.0.0
+  - name: Null pointer dereference in PKCS12 parsing
+    cve_id: CVE-2024-0727
+    cve_url: https://github.com/advisories/GHSA-9v9h-cgj8-h64p
+    detected_date: Feb 17
+    severity: moderate
+    first_patched: 42.0.2
 - name: csvw
   description: CSV on the web
   package_url: https://pypi.org/project/csvw
@@ -1134,6 +1177,13 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: Edward Beeching
   last_updated_on: 2022-03-23 20:18:43.000000000 Z
+  vulnerabilities:
+  - name: Dash apps vulnerable to Cross-site Scripting
+    cve_id: CVE-2024-21485
+    cve_url: https://github.com/advisories/GHSA-547x-748v-vp6p
+    detected_date: Feb 3
+    severity: moderate
+    first_patched: 2.15.0
 - name: dash-core-components
   description: Core component suite for Dash
   package_url: https://pypi.org/project/dash-core-components
@@ -1148,6 +1198,13 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-07-20 11:43:48.000000000 Z
+  vulnerabilities:
+  - name: Dash apps vulnerable to Cross-site Scripting
+    cve_id: CVE-2024-21485
+    cve_url: https://github.com/advisories/GHSA-547x-748v-vp6p
+    detected_date: Feb 3
+    severity: moderate
+    first_patched: 
 - name: dash-html-components
   description: Vanilla HTML components for Dash
   package_url: https://pypi.org/project/dash-html-components
@@ -1162,6 +1219,13 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-07-20 11:43:48.000000000 Z
+  vulnerabilities:
+  - name: Dash apps vulnerable to Cross-site Scripting
+    cve_id: CVE-2024-21485
+    cve_url: https://github.com/advisories/GHSA-547x-748v-vp6p
+    detected_date: Feb 3
+    severity: moderate
+    first_patched: 
 - name: decorator
   description: Decorators for Humans
   package_url: https://pypi.org/project/decorator
@@ -1344,6 +1408,13 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: Edward Beeching
   last_updated_on: 2022-03-23 20:18:43.000000000 Z
+  vulnerabilities:
+  - name: fonttools XML External Entity Injection (XXE) Vulnerability
+    cve_id: CVE-2023-45139
+    cve_url: https://github.com/advisories/GHSA-6673-4983-2vx5
+    detected_date: Jan 10
+    severity: high
+    first_patched: 4.43.0
 - name: fsspec
   description: File-system specification
   package_url: https://pypi.org/project/fsspec
@@ -1470,6 +1541,13 @@ tools:
   detection_source: examples/research_projects/decision_transformer/requirements.txt
   last_updated_by: dependabot[bot]
   last_updated_on: 2023-12-07 15:23:24.000000000 Z
+  vulnerabilities:
+  - name: Denial of Service Vulnerability in gRPC TCP Server (Posix-compatible platforms)
+    cve_id: CVE-2023-4785
+    cve_url: https://github.com/advisories/GHSA-p25m-jpj4-qcrr
+    detected_date: Feb 11
+    severity: high
+    first_patched: 1.53.2
 - name: gym
   description: 'The OpenAI Gym: A toolkit for developing and comparing your reinforcement
     learning agents'
